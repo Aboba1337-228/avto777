@@ -8,14 +8,10 @@
                     <p>(C) 2016 «Avto777 Group» — аренда автомобилей в Оренбурге</p>
                 </div>
                 <div class="v-footer__item">
-                    <a href="#">Выбор автомобиля</a>
-                    <a href="#">Станции аренды</a>
-                    <a href="#">Дисконтая система</a>
-                    <a href="#">Франчайзинг</a>
-                    <a href="#">Оперативный лизинг</a>
-                    <a href="#">Аренда с выкупом</a>
-                    <a href="#">О компании</a>
-                    <a href="#">Политика безопасности и оплаты</a>
+                    <router-link to="/catalog">Выбор автомобиля</router-link>
+                    <router-link to="/about">Дисконтая система</router-link>
+                    <router-link to="/about">О компании</router-link>
+                    <router-link to="/conf">Политика безопасности и оплаты</router-link>
                 </div>
                 <div class="v-footer__item">
                     <h3>Контакты</h3>

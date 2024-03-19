@@ -2,14 +2,14 @@
     <div class="v-header">
         <div class="v-container">
             <div class="v-inner">
-                <img src="logo.png" height="50" alt="">
+                <router-link to="/"><img src="logo.png" height="50" alt=""></router-link>
                 <div class="v-phone">
                     <h2>+7 (800) 333 08 33</h2>
                     <p>Круглосуточно</p>
                 </div>
                 <div class="v-btn">
                     <router-link class="v-btn__link" to="">Обратный звонок</router-link>
-                    <router-link class="v-btn__link" to="">Мой профиль</router-link>
+                    <router-link class="v-btn__link" to="/catalog">Каталог</router-link>
                 </div>
             </div>
         </div>

@@ -31,7 +31,9 @@
                     <input type="date">
                     <input type="time">
                 </div>
-                <button class="v-form__btn">Подобрать</button>
+                <div style="margin-top: 50px;">
+                    <router-link to="/catalog" class="v-form__btn">Подобрать</router-link>
+                </div>
             </div>
         </div>
     </div>
@@ -96,6 +98,7 @@ select, input {
     cursor: pointer;
     margin-top: 30px;
     transition: .3s;
+    text-decoration: none;
 }
 
 .v-form__btn:hover {

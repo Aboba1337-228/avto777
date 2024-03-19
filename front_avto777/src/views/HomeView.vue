@@ -14,7 +14,7 @@
     </div>
 
     <div class="v-container">
-      <vItem />
+      <vItem ver="1" title="Хотите Арендовать Автомобиль?" />
       <div class="v-container__info">
         <div class="v-inner v-item__info">
           <img src="/info/1.png" alt="">
@@ -36,17 +36,18 @@
           <div class="v-inner__my__car">
             <vCard 
               v-for="i in items"
+              :items="items"
               :image="i.image" 
-              :title="i.title" 
+              :title="i.mark" 
               :description="i.description" 
               :price="i.price" 
               :key="i" />
           </div>
           <router-link
             class="v-btn__link"  
-            to="">Посмотреть все</router-link>
+            to="/catalog">Посмотреть все</router-link>
         </div>
-      </div>
+    </div>
   </div>
 </template>
 
@@ -54,6 +55,7 @@
 import vItem from '@/components/Item/v-item.vue'
 import vCard from '@/components/Card/v-card.vue';
 import vPanel from '@/components/Panel/v-panel.vue';
+import axios from 'axios';
 
 export default {
   components: {
@@ -64,11 +66,22 @@ export default {
 
   data() {
     return {
-      items: [
-        
-      ]
+      items: []
     }
   },
+
+  mounted() {
+    this.cars()
+  },
+
+  methods: {
+    cars() {
+      axios.post('http://avto77-api/cars')
+        .then(response => {
+          this.items = response.data
+        })
+    }
+  }
 }
 </script>
 
